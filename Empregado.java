@@ -1,20 +1,31 @@
 public class Empregado {
-    private String name;
-    private int age;
+    private String nome;
+    private int idade;
+    private int tipo;
+    private double salario;
+    private double comissao;
+    private double bonus;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setnome(String nome) {
+        this.nome = nome;
     }
 
-    public String getName () {
-        return this.name;
+    public String getnome () {
+        return this.nome;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setidade(int idade) {
+        this.idade = idade;
     }
 
-    public int getAge() {
-        return this.age;
+    public int getidade() {
+        return this.idade;
+    }
+
+    public double calculaSalario () {
+        if (tipo == 1) return salario;
+        else if (tipo == 2) return (salario + salario * comissao);
+        else if (tipo == 3) return (salario + bonus);
+        else return 0;
     }
 }
