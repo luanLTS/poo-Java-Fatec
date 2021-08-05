@@ -22,6 +22,14 @@ public class Empregado {
         return this.idade;
     }
 
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+
+    public int getInt() {
+        return this.tipo;
+    }
+
     public double calculaSalario () {
         if (tipo == 1) return salario;
         else if (tipo == 2) return (salario + salario * comissao);
