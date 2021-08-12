@@ -26,8 +26,32 @@ public class Empregado {
         this.tipo = tipo;
     }
 
-    public int getInt() {
+    public int getTipo() {
         return this.tipo;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public double getSalario() {
+        return this.salario;
+    }
+
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
+    }
+
+    public double getbonus() {
+        return this.bonus;
+    }
+
+    public void setComissao(double comissao) {
+        this.comissao = comissao;
+    }
+
+    public double getcomissao() {
+        return this.comissao;
     }
 
     public double calculaSalario () {
