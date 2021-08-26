@@ -1,17 +1,17 @@
-import javax.swing.JOptionPane;
-
 public class TesteLivroDeNotas {
     public static void main(String[] args) { 
-        //? o lLivroDeNotas agora é um tipo de dados já que definimos a classe LivroDeNotas
-        LivrosDeNotas livro1; //? variavel de referencia (tipo um ponteiro do C)
-        livro1 = new LivrosDeNotas(); //? new instancia um objeto
-        livro1.nomeDoCurso = JOptionPane.showInputDialog("Qual o nome do curso?");
-        livro1.exibirMensagem(); //? . operador de acesso à membro
-        
-        LivrosDeNotas livro2 = new LivrosDeNotas();
-        livro2.nomeDoCurso = JOptionPane.showInputDialog("Qual o nome do curso?");
-        livro2.exibirMensagem();
-        
-        System.out.println("Terminando...");
+/*         LivrosDeNotas livro = new LivrosDeNotas("ADS");
+        livro.setNomeCurso("ADS");
+        System.out.println(livro.getNomeCurso());
+        livro.exibirMensagem(); */
+
+        LivrosDeNotas livro1 = new LivrosDeNotas("ADS");
+        LivrosDeNotas livro2 = new LivrosDeNotas("CCP");
+        System.out.println(livro1.getNomeCurso());
+        System.out.println(livro2.getNomeCurso());
+        livro1 = livro2; //? l1 agora aponta para o mesmo obj que l2
+        System.out.println(livro1.getNomeCurso()); // CCP
+        System.out.println(livro2.getNomeCurso()); // CCP
+
     }
 }
