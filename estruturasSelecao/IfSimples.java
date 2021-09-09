@@ -14,7 +14,7 @@ public class IfSimples {
         // double: Double
 
 
-
+        int idade = JOptionPane.showInputDialog( "sua idade");
         // tipo estaticamente, fala qual o tipo da variavel
         double nota;
         nota = Double.parseDouble(JOptionPane.showInputDialog("Digite um valor")) ;
