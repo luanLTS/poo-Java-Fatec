@@ -22,6 +22,6 @@ public class TesteSobrecarga {
         System.out.println(intString);
 
         int stringInt = calc.soma(s1, a);
-        System.out.println(stringInt);
+        System.out.println(stringInt);  
     }
 }
