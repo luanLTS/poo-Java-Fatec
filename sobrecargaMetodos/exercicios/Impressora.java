@@ -1,3 +1,5 @@
+package exercicios;
+
 public class Impressora {
     public void exibir (float x) {
         System.out.println(x);
