@@ -12,7 +12,7 @@ public class TesteEmpregradoSemPolimorfismo {
         // a estrutua de selecao usada não nos preocupa
 
         for (int i = 0; i < 10; i++) {
-            int tipo = gen.nextInt(4) + 1;
+            int tipo = gen.nextInt(5) + 1;
             Empregado e = new Empregado(tipo);
             switch (tipo) {
                 case 1:
@@ -30,6 +30,10 @@ public class TesteEmpregradoSemPolimorfismo {
                 case 4:
                     e.setValorHora(20 + gen.nextDouble() * 50);
                     e.setHorasTrabalhadas(120 + gen.nextDouble() * 40);
+                    break;
+                case 5:
+                    e.setNumeroTarefas(50 + gen.nextInt(21));
+                    e.setValorTarefa(100 + gen.nextDouble() * 300);
                     break;
             }
 
@@ -52,6 +56,8 @@ public class TesteEmpregradoSemPolimorfismo {
                 + empregados.get(i).getBonus();
             } else if (empregados.get(i).getTipo() == 4) {
                 salarioFinal = empregados.get(i).getHorasTrabalhadas() * empregados.get(i).getValorHora();
+            } else if (empregados.get(i).getTipo() == 5) {
+                salarioFinal = empregados.get(i).getNumeroTarefas() * empregados.get(i).getValorTarefa();
             }
 
             System.out.printf("Empregado %d: %.2f\n", i + 1, salarioFinal);
