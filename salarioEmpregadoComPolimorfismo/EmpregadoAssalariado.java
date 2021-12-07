@@ -1,4 +1,3 @@
-package salarioEmpregadoComPolimorfismo;
 
 // por ela ser uma classe concreta de uma classe abstrata (empregado) ela precisa sobreescrever o metodo calculaSalario()
 public class EmpregadoAssalariado extends Empregado {

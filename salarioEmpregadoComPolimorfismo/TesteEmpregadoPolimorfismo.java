@@ -1,12 +1,16 @@
-package salarioEmpregadoComPolimorfismo;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Random;
 
-import java.util.*;
 public class TesteEmpregadoPolimorfismo {
     public static void main(String[] args) {
         Random gen = new Random();
-        List<Empregado> empregados = new ArrayList<>(10);
-        for ( int i = 0; i < empregados.size(); i++ ) {
+
+        List<Empregado> empregados = new ArrayList<>();
+
+        for ( int i = 0; i < 10; i++ ) {
             int tipo = gen.nextInt(4) + 1;
+
             switch(tipo) {
                 case 1: { // as chaves faz a restrição de escopo, todas as variaveis declaradas dentro do case são apagadas da memoria
                     double salario = 2000 + gen.nextDouble() * 1000;
@@ -34,8 +38,10 @@ public class TesteEmpregadoPolimorfismo {
                 }
             }
         }
+
         for (int i = 0; i < empregados.size(); i++) {
-            System.out.printf("Empregado %d: %2.f\n", i + 1, empregados.get(i).calculaSalario());
+            double salarioFinal = empregados.get(i).calculaSalario();
+            System.out.printf("Empregado %d: %.2f\n", i + 1, salarioFinal);
         }
     }
 }

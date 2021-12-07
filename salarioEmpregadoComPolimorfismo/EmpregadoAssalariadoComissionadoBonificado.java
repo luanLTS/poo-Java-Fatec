@@ -1,4 +1,3 @@
-package salarioEmpregadoComPolimorfismo;
 
 public class EmpregadoAssalariadoComissionadoBonificado extends EmpregadoAssalariadoComissionado {
     private double bonus;

@@ -1,4 +1,3 @@
-package salarioEmpregadoComPolimorfismo;
 
 public class EmpregadoHorista extends Empregado {
     private double valorHora, horasTrabalhadas;

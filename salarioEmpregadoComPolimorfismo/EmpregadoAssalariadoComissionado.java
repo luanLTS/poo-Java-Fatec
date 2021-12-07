@@ -1,4 +1,3 @@
-package salarioEmpregadoComPolimorfismo;
 
 public class EmpregadoAssalariadoComissionado extends EmpregadoAssalariado{
     private double comissao;
